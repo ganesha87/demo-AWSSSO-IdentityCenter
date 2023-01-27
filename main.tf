@@ -37,13 +37,6 @@ module "sso_account_assignments" {
       principal_name      = "Developers"
     },
     {
-      account             = "116309360350",
-      permission_set_arn  = module.permission_sets.permission_sets["Engg-ReadOnly"].arn,
-      permission_set_name = "Engg-ReadOnly",
-      principal_type      = "GROUP",
-      principal_name      = "Testers"
-    },
-    {
       account             = "262169116715", # Represents the "Sandbox" account
       permission_set_arn  = module.permission_sets.permission_sets["Engg-PowerUser"].arn,
       permission_set_name = "Engg-PowerUser",
