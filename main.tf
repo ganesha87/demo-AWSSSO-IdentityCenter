@@ -63,6 +63,24 @@ module "sso_account_assignments" {
       permission_set_name = "Engg-PowerUser",
       principal_type      = "USER",
       principal_name      = "awsconsole@pioneer.admin"
+    },
+    {
+      account             = "116309360350", # Represents the "production" account
+      permission_set_arn  = "arn:aws:sso:::permissionSet/ssoins-65958a9bd17fab05/ps-4a8b96da2b4a7568",
+      permission_set_name = "AdministratorAccess",
+      principal_type      = "GROUP",
+      principal_name      = "Managers"
+    },
+    {
+      account             = "262169116715", # Represents the "Sandbox" account
+      permission_set_arn  = "arn:aws:sso:::permissionSet/ssoins-65958a9bd17fab05/ps-4a8b96da2b4a7568",
+      permission_set_name = "AdministratorAccess",
+      principal_type      = "GROUP",
+      principal_name      = "Managers"
     }
+      #[
+      #{Dev,AdministratorAccess,Managers}
+      #{Prod,AdministratorAccess,Managers}
+      #]
   ]
 }
