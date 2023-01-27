@@ -61,8 +61,8 @@ module "sso_account_assignments" {
       account             = "116309360350", # Represents the "production" account
       permission_set_arn  = "arn:aws:sso:::permissionSet/ssoins-65958a9bd17fab05/ps-281aae2cfbe9b144",
       permission_set_name = "Engg-PowerUser",
-      principal_type      = "GROUP",
-      principal_name      = "Developers"
+      principal_type      = "USER",
+      principal_name      = "awsconsole@pioneer.admin"
     }
   ]
 }
